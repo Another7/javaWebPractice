@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebRoot/left.jspf=UTF-8
+encoding//WebRoot/personal/personalInfo.jsp=UTF-8
+encoding//WebRoot/personal/personalPage1.jsp=UTF-8
+encoding//src/cn/edu/zzti/dao/UserDAO.java=utf8
+encoding//src/cn/edu/zzti/entity/PersonalInfo.java=utf8
+encoding//src/cn/edu/zzti/servlet/LoginServlet.java=utf8
+encoding//src/cn/edu/zzti/servlet/view/IndexView.java=UTF-8
+encoding//src/cn/edu/zzti/servlet/view/LoginPageView.java=utf8
+encoding//src/cn/edu/zzti/servlet/view/PersonalInfoView.java=utf8
+encoding//src/cn/edu/zzti/servlet/view/PersonalPage1.java=utf8
+encoding//src/cn/edu/zzti/servlet/view/PersonalPage2.java=utf8
+encoding//src/cn/edu/zzti/util/BeanUtil.java=utf8
+encoding/<project>=UTF-8
