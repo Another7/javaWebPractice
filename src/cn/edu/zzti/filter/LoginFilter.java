@@ -29,6 +29,7 @@ public class LoginFilter implements Filter {
 		HttpSession session = hreq.getSession();
 		System.out.println("requestPath:"+requestPath);
 		if(containsPath(requestPath)){
+			System.out.println("doFilter、、、");
 			chain.doFilter(request, response);
 		}else if(session.getAttribute("user")==null){
 			if (requestPath.indexOf("web")>-1){
