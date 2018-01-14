@@ -27,7 +27,7 @@ public class LoginFilter implements Filter {
 		HttpServletResponse hresp = (HttpServletResponse)response;
 		String requestPath = hreq.getServletPath();
 		HttpSession session = hreq.getSession();
-		System.out.println(requestPath);
+		System.out.println("requestPath:"+requestPath);
 		if(containsPath(requestPath)){
 			chain.doFilter(request, response);
 		}else if(session.getAttribute("user")==null){
@@ -43,6 +43,7 @@ public class LoginFilter implements Filter {
 	public void init(FilterConfig fConfig) throws ServletException {
 		//获取要放行的路径列表
 		String values = fConfig.getInitParameter("paths");
+		System.out.println("InitParameters:"+values);
 	    pathList = values.split(",");
 	}
 	public  boolean containsPath(String path){
