@@ -14,9 +14,7 @@ import cn.edu.zzti.entity.UserDO;
 import cn.edu.zzti.util.DAOFactory;
 
 public class demo {
-UserDAO userDAO = (UserDAO) DAOFactory.getDAO(DAOFactory.USER_DAO_CLASS_NAME);
-	
-	
+	UserDAO userDAO = (UserDAO) DAOFactory.getDAO(DAOFactory.USER_DAO_CLASS_NAME);
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -30,10 +28,11 @@ UserDAO userDAO = (UserDAO) DAOFactory.getDAO(DAOFactory.USER_DAO_CLASS_NAME);
 	public void test() {
 		fail("Not yet implemented");
 	}
+
 	@Test
-	public void testFindUser(){
-		String username="test' or 1=1 #";
-		String password= "";
+	public void testFindUser() {
+		String username = "test' or 1=1 #";
+		String password = "";
 		try {
 			Assert.assertNull(userDAO.findUser(username, password));
 		} catch (SQLException e) {
