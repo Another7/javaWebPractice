@@ -9,7 +9,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<base href="<%=basePath%>">
+<!-- base href="<%=basePath%>"> -->
 
 <title>Another My JSP 'login.jsp' starting page</title>
 
@@ -25,10 +25,12 @@
 </head>
 
 <body>
+<p><%=basePath %><br>${pageContext.servletContext.contextPath}/web/registe.jsp</p>
+
 	<form action="${pageContext.servletContext.contextPath}/web/LoginServlet" method="post">
 		<table>
 			<tr>
-				<td>用户名Another:</td>
+				<td>用户名:</td>
 				<td><input type="text" name="username" />
 				</td>
 			</tr>
@@ -39,7 +41,7 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="right">
-				<a href="">注册</a>
+				<a href="${pageContext.servletContext.contextPath}/web/registe.jsp">注册</a>
 				<input type="submit" value="登录"/>
 				</td>
 			</tr>

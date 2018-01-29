@@ -17,11 +17,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
+<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-  </head>
+</head>
   
   <body>
     <table>
@@ -44,10 +44,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<td></td>
     	</tr>
     	<%
-    	Object o = request.getAttribute("auctionList");
-    	if(o!=null){
-    		List<AuctionDO> list = (List<AuctionDO>)o;
-    		for(int i=0;i<list.size();i++){
+    		Object o = request.getAttribute("auctionList");
+    		if (o != null) {
+    			List<AuctionDO> list = (List<AuctionDO>) o;
+    			for (int i = 0; i < list.size(); i++) {
     	%>
 		    	<tr>
 		    		<td><%= list.get(i).getId() %></td>

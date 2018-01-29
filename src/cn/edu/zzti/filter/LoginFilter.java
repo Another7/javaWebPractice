@@ -27,14 +27,14 @@ public class LoginFilter implements Filter {
 		HttpServletResponse hresp = (HttpServletResponse)response;
 		String requestPath = hreq.getServletPath();
 		HttpSession session = hreq.getSession();
-//		System.out.println("requestPath:"+requestPath);
+		System.out.println("requestPath:"+requestPath);
 //		System.out.println(hreq.getContextPath());
 		//如果是登录界面，放行
 		if(containsPath(requestPath)){
 			chain.doFilter(request, response);
 			//查看session中是否设置了user
 		}else if(session.getAttribute("user")==null){
-//			System.out.println("user is null");
+			System.out.println("user is null");
 			if (requestPath.indexOf("web")>-1){
 				hresp.sendRedirect(hreq.getContextPath()+ PathConstence.JSP_WEB_BASE+"/login.jsp");
 			}else{
