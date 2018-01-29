@@ -19,8 +19,16 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="lib" path="D:/Tomcat/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="D:/Tomcat/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Tomcat/lib/jsp-api.jar" sourcepath="D:/Tomcat/apache-tomcat-8.5.20-src.zip">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Tomcat/lib/servlet-api.jar" sourcepath="D:/Tomcat/apache-tomcat-8.5.20-src.zip">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="D:/Tomcat/jstl/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/jstl.jar"/>
 	<classpathentry kind="lib" path="D:/Tomcat/jstl/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/standard.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes/"/>

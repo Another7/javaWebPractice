@@ -49,9 +49,11 @@ public class LoginServlet extends HttpServlet {
 		String error = checkLogin(userDO);
 		
 		String targetPath = request.getContextPath();
+		//登录成功
 		if(error==null){
 			request.getSession().setAttribute("user", userDO);
 			targetPath = PathConstence.JSP_MANAGE_BASE+"/index.jsp";
+		//登陆失败
 		}else{
 			request.setAttribute("error", error);
 			targetPath = PathConstence.JSP_MANAGE_BASE+"/login.jsp";

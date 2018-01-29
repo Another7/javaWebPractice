@@ -18,9 +18,10 @@ public class DAOFactory {
     public static final String TEMPORARY_CART_DAO_CLASS_NAME="cn.edu.zzti.dao.impl.constance.TemporaryCartDAOImpl";
     private DAOFactory factory = new DAOFactory();
     private DAOFactory(){}
-    private static AuctionDAO auctionDAO = new AuctionDAOImpl();
-    private static PersonalDAO personalDAO = new PersonalDAOImpl();
-    private static UserDAO userDAO = new UserDAOImpl();
+    //暂时注掉
+//    private static AuctionDAO auctionDAO = new AuctionDAOImpl();
+//    private static PersonalDAO personalDAO = new PersonalDAOImpl();
+//    private static UserDAO userDAO = new UserDAOImpl();
     public static BaseDAO getDAO(String className){
         if(className!=null&&!"".equals(className)){
             try {

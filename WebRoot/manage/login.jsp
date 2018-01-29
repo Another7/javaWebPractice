@@ -4,9 +4,11 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
-	System.out.println("path:"+path);
-	System.out.println("basePath:"+basePath);
 	
+	System.out.println(request.getContextPath());
+	System.out.println(request.getScheme());
+	System.out.println(request.getServerName());
+	System.out.println(request.getServerPort());
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -28,11 +30,16 @@
 </head>
 
 <body>
-	<p>
-		<%! String string = null; %>
-		string = ${pageContext.servletContext.contextPath}
-		out.printf(string);
-	</p>
+	<p>Hello
+		<%System.out.println(request.getContextPath());
+		System.out.println(request.getScheme());
+		System.out.println(request.getServerName());
+		System.out.println(request.getServerPort()); %>
+		<%=request.getContextPath() %><br>
+		<%=request.getScheme() %><br>
+		<%=request.getServerName() %><br>
+		<%=request.getServerPort() %><br>
+	</p><br>
 	<form action="${pageContext.servletContext.contextPath}/manage/LoginServlet" method="post">
 		<table>
 			<tr>
@@ -50,5 +57,6 @@
 			</tr>
 		</table>
 	</form>
+	<p>HelloWorld</p>
 </body>
 </html>

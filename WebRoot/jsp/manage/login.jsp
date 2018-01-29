@@ -4,12 +4,16 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	System.out.println(request.getContextPath());
+	System.out.println(request.getScheme());
+	System.out.println(request.getServerName());
+	System.out.println(request.getServerPort());
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<base href="<%=basePath%>">
+<!--  <base href="<%=basePath%>"> -->
 
 <title>My JSP 'login.jsp' starting page</title>
 
@@ -25,6 +29,7 @@
 </head>
 
 <body>
+	
 	<form action="<%=pageContext.getServletContext().getContextPath() %>/manage/LoginServlet" method="post">
 		<table>
 			<tr>

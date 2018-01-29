@@ -27,11 +27,14 @@ public class LoginFilter implements Filter {
 		HttpServletResponse hresp = (HttpServletResponse)response;
 		String requestPath = hreq.getServletPath();
 		HttpSession session = hreq.getSession();
-		System.out.println("requestPath:"+requestPath);
+//		System.out.println("requestPath:"+requestPath);
+//		System.out.println(hreq.getContextPath());
+		//如果是登录界面，放行
 		if(containsPath(requestPath)){
-			System.out.println("doFilter、、、");
 			chain.doFilter(request, response);
+			//查看session中是否设置了user
 		}else if(session.getAttribute("user")==null){
+//			System.out.println("user is null");
 			if (requestPath.indexOf("web")>-1){
 				hresp.sendRedirect(hreq.getContextPath()+ PathConstence.JSP_WEB_BASE+"/login.jsp");
 			}else{
@@ -44,8 +47,10 @@ public class LoginFilter implements Filter {
 	public void init(FilterConfig fConfig) throws ServletException {
 		//获取要放行的路径列表
 		String values = fConfig.getInitParameter("paths");
-		System.out.println("InitParameters:"+values);
 	    pathList = values.split(",");
+//	    for (String path : pathList) {
+//	    	System.out.println(path);
+//	    }
 	}
 	public  boolean containsPath(String path){
 		for(String p:pathList){
